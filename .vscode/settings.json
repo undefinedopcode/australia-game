@@ -1,0 +1,8 @@
+{
+    "git.ignoreLimitWarning": true,
+    "go.gopath": "${workspaceRoot};${workspaceRoot}\\vendor",
+    "terminal.integrated.env.windows": {
+        "PATH": "${env:PATH}:${workspaceRoot}\\bin",
+        "GOPATH": "${workspaceRoot};${workspaceRoot}\\vendor"
+    }
+}
