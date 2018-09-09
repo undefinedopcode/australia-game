@@ -28,7 +28,7 @@ func main() {
 
 	for _, r := range data {
 		if r[*field] != "" {
-			fmt.Println("\"" + r[*field] + "\"")
+			fmt.Println(r[*field])
 		}
 	}
 }
