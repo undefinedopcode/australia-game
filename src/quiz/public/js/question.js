@@ -1,6 +1,6 @@
 var gameState = {}
 
-const correctNeeded = 1;
+const correctNeeded = 5;
 const roundSize = 10;
 
 function newGame() {
