@@ -15,7 +15,7 @@ func init() {
 
 func New() (*question.Question, error) {
 
-	q := "What was the average life expectancy of residents of %s in the %s?"
+	q := "What is the average life expectancy of residents of %s in the %s?"
 	r, err := database.Random4DistinctLifeExpectancy()
 	if err != nil {
 		return nil, err

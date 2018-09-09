@@ -83,14 +83,14 @@ func popQuestionFunc(w http.ResponseWriter, r *http.Request) {
 	var q *question.Question
 	var err error
 
-	if rr < 80 {
+	if rr < 50 {
 		q, err = whatis.New()
 		log.Printf("Error: %v", err)
 		if err != nil {
 			w.WriteHeader(500)
 			return
 		}
-	} else if rr < 90 {
+	} else if rr < 75 {
 		q, err = medianrents.New()
 		log.Printf("Error: %v", err)
 		if err != nil {
