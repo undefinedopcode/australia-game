@@ -7,3 +7,8 @@ cd src/quiz
 go build .
 ./quiz
 ```
+
+Quiz server runs on port 3350 (Ballarats post code).
+
+Navigate to http://localhost:3350/ 
+
