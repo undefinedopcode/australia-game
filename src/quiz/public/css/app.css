@@ -1,0 +1,93 @@
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: greenyellow;
+}
+
+#map-background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+#score-box {
+    padding: 5px;
+    width: 10vw;
+    background-color:black;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    opacity: 0.7;   
+    color: white;
+}
+
+#bug-box {
+    padding: 0px;
+    width: 192px;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    opacity: 0.7;   
+}
+
+#question-box {
+    width: 80vw;
+    height: 30vh;
+    background-color:black;
+    position: absolute;
+    z-index: 10;
+    bottom: 5vh;
+    left: 10vw;
+    opacity: 0.7;
+}
+
+.question {
+    color: white;
+    font-size: 24pt;
+    font-weight: 500;
+    text-align: center;
+}
+
+.button.fill {
+    width: 35vw;
+    height: 5vh;
+}
+
+#question-container {
+    position: relative;
+    width: 80vw;
+    height: 30vh;
+}
+
+#question-answers {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0%;
+}
+
+.answer {
+    font-size: 16pt;
+    font-weight: 600;
+    padding: 5px;
+    width: 50%;
+}
+
+.answer.correct {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.answer.incorrect {
+    background-color: lightcoral;
+    color: darkred;
+}
+
+.answer.select {
+    background-color: orange;
+    color: black;
+}

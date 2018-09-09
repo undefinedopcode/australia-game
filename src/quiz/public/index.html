@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Australia Game</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <div id="container">
+        <div id="bug-box">
+            <img src="/images/ag-bug.png"/>            
+        </div>
+        <div id="score-box">
+            Score: <span id="score-value"></span><br/>
+            Round: <span id="round-number"></span><br/>
+            Question: <span id="question-number"></span> of <span id="question-count"></span>
+        </div>
+        <div id="map-background"></div>
+        <div id="question-box">
+            <div id="question-container">
+                <div class="question" id="question-text">Loading question...</div>
+                <!-- <div class="grid-container fluid">
+                    <div class="grid-x grid-margin-x">
+                    <div class="cell small-6"><a class="button primary fill" href="#">Primary</a></div>
+                    <div class="cell small-6"><a class="button primary fill" href="#">Primary</a></div>
+                    <div class="cell small-6"><a class="button primary fill" href="#">Primary</a></div>
+                    <div class="cell small-6"><a class="button primary fill" href="#">Primary</a></div>
+                    </div>
+                </div> -->
+                <div id="question-answers">
+                    <table class="answer-table">
+                    <tbody>
+                        <tr>
+                            <td onlick="selectAnswer(0)" class="answer" id="answer-a">A. <span id="text-a"></span></td>
+                            <td onlick="selectAnswer(1)" class="answer" id="answer-b">B. <span id="text-b"></span></td>
+                        </tr>
+                        <tr>
+                            <td onlick="selectAnswer(2)" class="answer" id="answer-c">C. <span id="text-c"></span></td>
+                            <td onlick="selectAnswer(3)" class="answer" id="answer-d">D. <span id="text-d"></span></td>
+                        </tr>
+                    </tbody>    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/question.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZqGVwihFyh101nzeb6nLWe0h944xiT9U"></script>
+    <script src="js/map.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
