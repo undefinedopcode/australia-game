@@ -24,6 +24,41 @@
     color: white;
 }
 
+#game-over {
+    visibility: hidden;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    position: absolute;
+    z-index: 50;
+    top: 10px;
+    right: 10px;
+    opacity: 0.9;   
+    color: white;
+}
+
+#next-round {
+    visibility: hidden;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    position: absolute;
+    z-index: 50;
+    top: 10px;
+    right: 10px;
+    opacity: 0.9;   
+    color: white;
+}
+
+.splash {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 #bug-box {
     padding: 0px;
     width: 192px;

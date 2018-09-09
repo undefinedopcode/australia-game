@@ -1,9 +1,12 @@
 var gameState = {}
 
-const correctNeeded = 5;
+const correctNeeded = 1;
 const roundSize = 10;
 
 function newGame() {
+    $("#game-over").css('visibility', 'hidden');
+    $("#next-round").css('visibility', 'hidden');
+    $("#container").css('visibility', 'visible');
     gameState = {
         score: 0,
         question: null,
@@ -16,7 +19,19 @@ function newGame() {
     fetchQuestion();
 }
 
+function triggerNextRound() {
+    $("#game-over").css('visibility', 'hidden');
+    $("#next-round").css('visibility', 'visible');
+    $("#container").css('visibility', 'hidden');
+    setTimeout(function() {
+        newRound();
+    }, 3000);
+}
+
 function newRound() {
+    $("#game-over").css('visibility', 'hidden');
+    $("#next-round").css('visibility', 'hidden');
+    $("#container").css('visibility', 'visible');
     gameState = {
         score: gameState.score,
         question: null,
@@ -119,6 +134,8 @@ function validateAnswer() {
         clearHighlights();
         highlightAnswer( gameState.selectedAnswer, "incorrect" );
         highlightAnswer( gameState.question['correct'], "correct" );
+        // gameOver();
+        // return;
     }
 
     renderScore();
@@ -130,7 +147,7 @@ function validateAnswer() {
                 if (gameState.correctThisRound < correctNeeded) {
                     gameOver();
                 } else {
-                    newRound();
+                    triggerNextRound();
                 }
             } else {
                 fetchQuestion();
@@ -143,6 +160,9 @@ function validateAnswer() {
 
 function gameOver() {
     console.log("game ended");
+    $("#next-round").css('visibility', 'hidden');
+    $("#game-over").css('visibility', 'visible');
+    $("#container").css('visibility', 'hidden');
 }
 
 function fetchQuestion() {
